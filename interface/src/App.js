@@ -28,9 +28,10 @@ const useStyles = () => ({
         display: 'flex',
         flex: 1,
         width: '100%',
-        alignItems: 'flex-start',
+        alignItems: 'center',
         justifyContent: 'center',
         marginTop: '20px',
+        flexDirection: 'column',
     },
     settingsSection: {
         display: 'flex',
@@ -128,9 +129,6 @@ const App = ({classes}) => {
                                              setIsCheckingBackendEndpoint={setIsCheckingBackendEndpoint}
                                              isCheckingBackendEndpoint={isCheckingBackendEndpoint}
                                              disabled={isFetchingImgs}/>
-                            <TextPromptInput enterPressedCallback={enterPressedCallback}
-                                             disabled={isFetchingImgs || !validBackendUrl}/>
-
                             <FormControl className={classes.imagesPerQueryControl}
                                          variant="outlined">
                                 <InputLabel id="images-per-query-label">
@@ -148,6 +146,9 @@ const App = ({classes}) => {
                                 </Select>
                                 <FormHelperText>More images = slower query</FormHelperText>
                             </FormControl>
+    
+                            <TextPromptInput enterPressedCallback={enterPressedCallback}
+                                             disabled={isFetchingImgs || !validBackendUrl}/>
                         </CardContent>
                     </Card>
                     {queryTime !== 0 && <Typography variant="body2" color="textSecondary">
