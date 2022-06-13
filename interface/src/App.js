@@ -37,7 +37,7 @@ const useStyles = () => ({
         display: 'flex',
         flexDirection: 'column',
         padding: '1em',
-        maxWidth: '300px',
+        maxWidth: '600px',
     },
     searchQueryCard: {
         marginBottom: '20px'
@@ -52,7 +52,7 @@ const useStyles = () => ({
     gallery: {
         display: 'flex',
         flex: '1',
-        maxWidth: '50%',
+        maxWidth: '80%',
         height: '100%',
         justifyContent: 'center',
         alignItems: 'flex-start',
